@@ -2,8 +2,8 @@ x-base_service: &base_service
     ports:
       - "${WEBUI_PORT:-7860}:7860"
     volumes:
-      - &v1 /virtualish/stable-diffusion-webui-docker/data:/data
-      - &v2 /virtualish/stable-diffusion-webui-docker/output:/output
+      - &v1 ./data:/data
+      - &v2 ./output:/output
     stop_signal: SIGKILL
     tty: true
     deploy:
